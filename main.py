@@ -38,17 +38,12 @@ def load_image(name, colorkey=None):
 
 all_sprites = pygame.sprite.Group()
 
-def menu_window()
-    pass
-def game_window()
-    pass
-def end_winodw()
+
+def menu_window():
     pass
 
-if __name__ == '__main__':
 
-    # pygame.mouse.set_visible(False)
-
+def game_window():
     clock = pygame.time.Clock()
     fps = 40
     running = True
@@ -60,5 +55,16 @@ if __name__ == '__main__':
         all_sprites.draw(screen)
         pygame.display.flip()
         clock.tick(fps)
+
+
+def end_winodw():
+    pass
+
+
+if __name__ == '__main__':
+    # pygame.mouse.set_visible(False)
+
+    menu_window()
+    game_window()
 
     pygame.quit()
