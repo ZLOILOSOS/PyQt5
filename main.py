@@ -38,6 +38,13 @@ def load_image(name, colorkey=None):
 
 all_sprites = pygame.sprite.Group()
 
+def menu_window()
+    pass
+def game_window()
+    pass
+def end_winodw()
+    pass
+
 if __name__ == '__main__':
 
     # pygame.mouse.set_visible(False)
