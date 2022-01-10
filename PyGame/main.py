@@ -112,19 +112,21 @@ class Gun(pygame.sprite.Sprite):
         self.rect = self.rect.move(self.x, self.y)
         self.mask = pygame.mask.from_surface(self.image)
 
-    def move(self):
-        running = True
+    def move(self, x, y, mv):
+        '''running = True
+        self.x = x
+        self.y = y
         while running:
             key = pygame.key.get_pressed()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
                 if key[pygame.K_DOWN]:
-                    self.x -= 10
+                    self.y -= mv
                     self.rect = self.rect.move(self.x, self.y)
                 elif key[pygame.K_UP]:
-                    self.y -= 10
-                    self.rect = self.rect.move(self.x, self.y)
+                    self.y += mv
+                    self.rect = self.rect.move(self.x, self.y)'''
 
     def shoot(self):
         pass
@@ -313,15 +315,15 @@ def game_window():
         button(850, 550, 150, 50, color1, color2, action='menu')
         button(0, 550, 150, 50, color1, color2, action='exit')
         button(425, 550, 150, 50, color1, color2, action='pause')
-
-        all_sprites.draw(screen)
-        pygame.display.flip()
         if amount == 5:
             Gun(110, 880, 0)
         elif amount == 8:
             Gun(68, 922, 0)
         elif amount == 10:
             Gun(55, 935, 0)
+
+        all_sprites.draw(screen)
+        pygame.display.flip()
     pygame.quit()
 
 
